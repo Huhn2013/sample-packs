@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
 }
 
 header {
@@ -10,6 +11,10 @@ header {
     color: white;
     padding: 1em 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -25,11 +30,17 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
 }
 
 section {
     padding: 2em;
     text-align: center;
+    margin-top: 60px;
 }
 
 .product {
@@ -38,6 +49,11 @@ section {
     padding: 1em;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 .product img {
@@ -53,4 +69,17 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: red;
 }
